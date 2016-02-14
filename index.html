@@ -5,9 +5,20 @@
 	<title>前端angular控件库</title>
 	<link rel="stylesheet" href="/static/bower_components/angular-chart/angular-chart.css" />
 	<link rel="stylesheet" href="/static/bower_components/bootstrap-3.3.6-dist/css/bootstrap.css" />
+	<link rel="stylesheet" href="/static/bower_components/jquery-ui-1.12.0-beta.1.custom/jquery-ui.css" />
 </head>
 <body ng-controller="appCtrl">
 	<div ng-view></div>
+
+	<script type='text/javascript' src='http://api.map.baidu.com/api?v=2.0&ak=irHT3kGnwIlw7PX3CuX4ntvb'></script>
+	<!-- ak='xxx',xxx为百度地图秘钥，使用1.5及以上版本需申请 -->
+
+	<script type='text/javascript' src='http://api.map.baidu.com/library/AreaRestriction/1.2/src/AreaRestriction_min.js'></script>
+	<!-- 用于设置地图显示范围 -->
+
+	<script src="/static/bower_components/jquery/jquery-1.9.1.min.js"></script>
+	<script src="/static/bower_components/jquery-ui-1.12.0-beta.1.custom/jquery-ui.js"></script>
+
 	<script src="/static/bower_components/angular/angular.min.js"></script>
 	<script src="/static/bower_components/angular-animate/angular-animate.js"></script>
 	<!-- ui-bootstrap依赖于angular-animation -->
@@ -15,14 +26,23 @@
 	<script src="/static/bower_components/angular-route/angular-route.js"></script>
 	<script src="/static/bower_components/chart/Chart.js"></script>
 	<script src="/static/bower_components/angular-chart/angular-chart.js"></script>
+
 	<script src="/static/bower_components/ui-ace/ace.js"></script>
 	<script src="/static/bower_components/ui-ace/ui-ace.js"></script>
+	<script src="/static/bower_components/ui-ace/theme-twilight.js"></script>
+	<!-- date.js需要jquery jquery-ui angularjs -->
+	<script src="/static/bower_components/jquery-date/date.js"></script>
+	<!-- date.js需要jquery jquery-ui angularjs -->
+	<script src="/static/bower_components/ui-sortable-0.13.4/sortable.js"></script>
 
 	<script src="/static/js/common/app.js"></script>
 	<script src="/static/js/common/route.js"></script>
 	<script src="/static/js/controller/angularChartCtrl.js"></script>
 	<script src="/static/js/controller/UIBootstrapCtrl.js"></script>
 	<script src="/static/js/controller/UIAceCtrl.js"></script>
-	<!--<script src="/static/js/controller/app.js"></script>-->
+	<script src="/static/js/controller/DatePickerCtrl.js"></script>
+	<script src="/static/js/controller/BaiduMapCtrl.js"></script>
+	<script src="/static/js/controller/sortableCtrl.js"></script>
+
 </body>
 </html>

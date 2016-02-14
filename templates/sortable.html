@@ -1,0 +1,21 @@
+<div class="wrapper-content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="col-md-12">
+                <ul class="list-group" ui-sortable="sortableOptions" ng-model="items">
+                    <li class="list-group-item" ng-repeat="item in items"><span ng-bind="item"></span></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-group" ui-sortable="sortableOptionsList[0]" class="apps-container screen floatleft" ng-model="rawScreens[0]">
+                    <li class="list-group-item" ng-repeat="app in rawScreens[0]">{{$index}} {{app.title}}</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-group" ui-sortable="sortableOptionsList[1]" class="apps-container screen floatleft" ng-model="rawScreens[1]">
+                    <li class="list-group-item" ng-repeat="app in rawScreens[1]">{{$index}} {{app.title}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

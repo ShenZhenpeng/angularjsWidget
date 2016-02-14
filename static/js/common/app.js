@@ -7,10 +7,16 @@ angular.module('angularWidgetApp', [
     'ngRoute',
     'route',
     'chart.js',
+    'ui.ace',
+    'ui.date',
+    'ui.sortable',
 
     'angularChartModule',
     'UIBootstrapModule',
-    'UIAceModule'
+    'UIAceModule',
+    'DatePickerModule',
+    'BaiduMapModule',
+    'sortableModule'
 ]).config(function () {
 
 }).controller('appCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {

@@ -91,7 +91,7 @@ body {
 }
 
 .pagination a{
-  color:#555;  
+  color:#555;
 }
 
 
@@ -101,7 +101,7 @@ body {
 
 li i {
   margin-right: 5px;
-  margin-left: 5px;  
+  margin-left: 5px;
 }
 
 .listing-item {
@@ -183,28 +183,28 @@ img, video {
    scroll to top
    ========================================================================== */
 
-#gotop{ 
-  display:block;  
-  width:36px; 
+#gotop{
+  display:block;
+  width:36px;
   height:36px;
-  position:fixed;  
-  bottom:40px;  
-  right:30px; 
+  position:fixed;
+  bottom:40px;
+  right:30px;
   border-radius:7px;
-  text-decoration:none;  
-  display:none;  
-  background-color:#999999;     
+  text-decoration:none;
+  display:none;
+  background-color:#999999;
 }
-#gotop span{ 
-  display:block; 
-  color:#dddddd; 
-} 
-#gotop span:hover{ 
-  color:#cccccc; 
-} 
-#gotop span{ 
-  font-size:24px; 
-  text-align:center; 
+#gotop span{
+  display:block;
+  color:#dddddd;
+}
+#gotop span:hover{
+  color:#cccccc;
+}
+#gotop span{
+  font-size:24px;
+  text-align:center;
 }
 
 /* =============================================================================
@@ -290,7 +290,7 @@ h6,section h5,section section h4,section section section h3{font-size:.8em}
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
   border-top-left-radius: 6px;
-  border-top-right-radius: 6px;  
+  border-top-right-radius: 6px;
 }
 
 h2,h3{
@@ -341,7 +341,7 @@ td {
 }
 
 /**
- * 
+ *
  * For modern browsers
  * 1. The space content is one way to avoid an Opera bug when the
  *    contenteditable attribute is included anywhere else in the document.
