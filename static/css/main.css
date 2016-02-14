@@ -1,0 +1,485 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+html {
+    overflow-x: visible;
+}
+body {
+    overflow-x: hidden;
+}
+.ng-cloak{
+    display:none;
+}
+.wrapper-content {
+    padding: 12px 10px 40px;
+    margin-top: 50px;
+}
+.sso-login {
+    background-color: #337ab7;
+    border-radius: 2px;
+    box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.08);
+    color: #fff !important;
+    font-size: 14px;
+    line-height: 14px !important;
+    padding: 6px 25px !important;
+    margin: 12px;
+}
+.navbar-light .navbar-op > li > a:hover {
+    background-color: #337ab7;
+    box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.05);
+    color: #fbfbfb;
+    opacity: 1;
+}
+.ibox {
+    clear: both;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding: 0;
+}
+.ibox.collapsed .ibox-content {
+    display: none;
+}
+.ibox.collapsed .fa.fa-chevron-up:before {
+    content: "\f078";
+}
+.ibox.collapsed .fa.fa-chevron-down:before {
+    content: "\f077";
+}
+.ibox:after,
+.ibox:before {
+    display: table;
+}
+.ibox-title {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #ffffff;
+    border-color: #e7eaec;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 4px 0px 0;
+    color: inherit;
+    margin-bottom: 0;
+    padding: 14px 15px 7px;
+    min-height: 48px;
+}
+.ibox-content {
+    background-color: #ffffff;
+    color: inherit;
+    padding: 10px;
+    border-color: #e7eaec;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 0px;
+    overflow: hidden;
+}
+.ibox-content h1{
+    color: #676a6c;
+}
+.ibox-title .form-group{
+    margin-right: 20px;
+}
+.table > tbody > tr > td {
+    border-top: 1px dashed #ddd !important;
+}
+.table-custom th {
+    background: none repeat scroll 0 0 #337ab7;
+    border-right: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+}
+.table-custom > thead > tr > th, .table-custom > tbody > tr > td {
+    padding: 6px !important;
+}
+.form-control {
+    font-size: 12px;
+    height: 26px;
+    padding: 3px 12px;
+}
+.form-content {
+    margin-bottom: 8px;
+}
+.btn {
+    font-size: 12px;
+    padding: 2px 12px;
+}
+.grid {
+    height: 700px;
+}
+/*标签类样式*/
+.labelInit{
+    border: none;
+}
+input:focus { outline: none; }
+.labelAdded{
+    border: 1px solid #4cae4c;
+    border-radius: 15px;
+    color: #4cae4c;
+    margin:0 5px 5px 0;
+    padding: 3px 10px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: color 0.6s, background-color 0.3s;
+    -moz-transition: color 0.6s, background-color 0.3s;
+    -ms-transition: color 0.6s, background-color 0.3s;
+    transition: color 0.6s, background-color 0.3s;
+    outline: none;
+}
+
+.labelAdded.ng-enter {
+     -webkit-animation: zoomIn 1s;
+     -moz-animation: zoomIn 1s;
+     -ms-animation: zoomIn 1s;
+     animation: zoomIn 1s;
+ }
+
+.labelAdded.ng-leave {
+     -webkit-animation: bounceOut 1s;
+     -moz-animation: bounceOut 1s;
+     -ms-animation: bounceOut 1s;
+     animation: bounceOut 1s;
+ }
+.panel{
+    -moz-animation: fadeIn 1s;
+    -ms-animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+    -webkit-animation-delay: .1s;
+}
+.labelAdded .label-del{
+    background: url(../images/del-label.png) no-repeat 0 0;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    position: absolute;
+    top:-8px;
+}
+
+.labelAdded.active,.labelAdded.selected{
+    background-color:#4cae4c ;
+    color: #fff;
+}
+
+.labelMD{
+    border: 1px dashed #4cae4c;
+    border-radius: 15px;
+    padding: 0 5px;
+}
+
+/* 重写bootstrap的样式 */
+.navbar-default{background:#fff}
+.ibox-content{border-top:none}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    background-color:#337ab7;
+    color: #fff;
+}
+.ui-grid-header-cell{background:#337ab7;border-color:#ddd; color: #fff;}
+.label{font-weight:normal}
+
+select.ui-grid-filter-select {
+    color: #555;
+}
+a.btn-os{
+    border:none;
+    height:50px;
+    line-height: 50px;
+    font-size:14px;
+    color:#777;
+    background:none!important;
+    padding:15px;
+}
+a.btn-os:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+.dropdown-menu-os{
+    border-radius: 0;
+    box-shadow: none;
+    margin:0;
+    min-width:100px;
+    padding:0;
+    border:1px solid #ddd;
+    border-top:none;
+    border-radius: 0 0 3px 3px;
+}
+.dropdown-menu > li{
+    border-top:1px solid #eee;
+}
+.dropdown-menu > li:first-child{
+    border-top:none
+}
+.dropdown-menu > li > a{
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+}
+.dropdown-menu > li > a:hover{
+    background:#337ab7;
+    color:#fff
+}
+.nav > li.active{
+    background: #337ab7;
+}
+.nav > li.active a.btn-os{
+    color: #fff;
+}
+
+*{transition:all .5s;-moz-transition:all .5s;-webkit-transition:all .5s;-o-transition:all .5s;}
+.score{font-size:60px;font-weight:bold;font-family:"Microsoft YaHei";margin: 50px 0 40px;
+	text-shadow:0 1px 0 #fff, 0 2px 0 #fff, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1),0 1px 3px rgba(0,0,0,0.1),0 3px 5px rgba(0,0,0,0.1),0 5px 10px rgba(0,0,0,0.1);color:#337ab7;}
+.list-group-item strong:first-child{width:60px;display:inline-block;}
+.list-group-item strong:first-child .badge{padding:3px 10px;background:#a94442;}
+.list-group-item strong:last-child{margin:0 20px;}
+@media (max-width: 768px) {
+.list-group-item strong:first-child{
+    width:60px;
+    height:30px;
+    display:block;
+}
+.list-group-item strong:last-child{
+    margin:10px 0;
+    display:block;
+}
+}
+.btnlist {
+    border: 0px;
+    background: #fff;
+    line-height: 20px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    color: #777;
+}
+.active .btnlist {
+    background-color: #337ab7;
+    color: #fff;
+}
+.ullist {
+    padding: 0;
+    position: absolute;
+    width: 81px;
+}
+.ullist li {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+.ullist li a {
+    color: #333;
+    line-height: 40px;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+}
+.ullist li a:hover {
+    color: #fff;
+    background: #337ab7;
+}
+
+
+.wrapper-main {
+    padding: 0;
+    width: 100%;
+    background: #337ab7;
+    box-shadow: 0px 0px 180px 20px #00f inset;
+}
+.center-content {
+    width: 80%;
+    min-width: 600px;
+    margin: 0 8.9%;
+}
+.main-score {
+    font-size: 260px;
+    color: #fff;
+    font-family: "Microsoft YaHei";
+}
+.main-score sub {
+    font-size: 60px;
+}
+.main-score label {
+    font-size: 50px;
+    position: relative;
+    opacity: 0;
+    top: -10px;
+}
+.bg-set {
+
+}
+.score-box {
+
+}
+.score-box > div {
+    margin: 0 0 30px;
+}
+.score-box article {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    width: 670px;
+}
+.score-box article img {
+    width: 50%;
+    position: absolute;
+    right: 45px;
+}
+.score-box article h2 {
+    width: 215px;
+    padding: 30px 0 0 96px;
+    color: #fff;
+    float: left;
+}
+.score-box article h2 label {
+    font-size: 126px;
+}
+/*.score-box article h2.h2-reset {*/
+    /*width: 215px;*/
+    /*padding: 48px 0 0 96px;*/
+    /*color: #fff;*/
+    /*float: left;*/
+/*}*/
+.score-box article h2.h2-reset span {
+    padding-left: 44px;
+    font-size: 30px;
+}
+.score-box article h1 {
+    width: 215px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 80px;
+    color: #0f0;
+    padding-top: 66px;
+    float: right;
+}
+.score-box article h1 label {
+    font-size: 30px;
+    position: relative;
+    opacity: 0;
+    top: -10px;
+    color: #FF0000;
+}
+.danger {
+    color: #f00;
+}
+.score-box article p {
+    font-size: 20px;
+    padding-left: 10px;
+    color: #ff0;
+    position: absolute;
+    right: 36px;
+    bottom: 28px;
+}
+.score-box article p span {
+    padding-left: 15px;
+}
+.score-box article div {
+    opacity: 1;
+    position: relative;
+    animation: moveright ease-out .5s;
+    -moz-animation: moveright ease-out .5s; /* Firefox */
+    -webkit-animation: moveright ease-out  .5s; /* Safari and Chrome */
+    -o-animation: moveright ease-out .5s; /* Opera */
+}
+.score-box article img {
+    position: absolute;
+    top: 100px;
+    animation: movetop ease-out .5s;
+    -moz-animation: movetop ease-out .5s; /* Firefox */
+    -webkit-animation: movetop ease-out .5s; /* Safari and Chrome */
+    -o-animation: movetop ease-out .5s; /* Opera */
+}
+
+@keyframes moveright
+{
+    0%   { left: -80px; opacity: 0.1; }
+    100% { left: 0px; opacity: 1; }
+}
+
+@-moz-keyframes moveright /* Firefox */
+{
+    0%   { left: -80px; opacity: 0.1; }
+    100% { left: 0px; opacity: 1; }
+}
+
+@-webkit-keyframes moveright /* Safari and Chrome */
+{
+    0%   { left: -80px; opacity: 0.1; }
+    100% { left: 0px; opacity: 1; }
+}
+
+@-o-keyframes moveright /* Opera */
+{
+    0%   { left: -80px; opacity: 0.1; }
+    100% { left: 0px; opacity: 1; }
+}
+
+@keyframes movetop
+{
+    0%   { top: 140px; }
+    100% { top: 100px; }
+}
+
+@-moz-keyframes movetop /* Firefox */
+{
+    0%   { top: 140px; }
+    100% { top: 100px; }
+}
+
+@-webkit-keyframes movetop /* Safari and Chrome */
+{
+    0%   { top: 140px; }
+    100% { top: 100px; }
+}
+
+@-o-keyframes movetop /* Opera */
+{
+    0%   { top: 140px; }
+    100% { top: 100px; }
+}
+.config .nav > li {
+    border: 1px solid #c3c69f;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 10px 10px 10px 5px;
+    padding: 5px 100px 5px 18px;
+}
+.form-margin div span {
+    margin-right: 20px;
+}
+.key-operator {
+    position: absolute;
+    right: 10px;
+    top: 6px;
+}
+.border-bottom-set {
+    border: 0px;
+    margin-bottom: 0px;
+}
+.border-bottom {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    background: #eee;
+    border-radius: 5px;
+}
+.form-reset {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-left: 40px;
+    margin-top: 8px;
+    padding: 8px 8px 8px 10px;
+}
+.glyphicon {
+    opacity: 0.8;
+}
+.margin-right-8 {
+    margin-right: 8px;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}

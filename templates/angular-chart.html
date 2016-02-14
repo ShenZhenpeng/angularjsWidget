@@ -1,0 +1,98 @@
+<div class="wrapper-content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Line Chart</div>
+                    <div class="panel-body">
+                        <div class="chart-container">
+                            <canvas id="line" class="chart chart-line" chart-data="dataLine"
+                                    chart-labels="labelsLine" chart-legend="true" chart-series="seriesLine"
+                                    chart-click="lineClick" >
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Bar Chart</div>
+                    <div class="panel-body">
+                        <div class="chart-container">
+                            <canvas id="bar" class="chart chart-bar"
+                                    chart-data="dataBar" chart-labels="labelsBar" chart-series="seriesBar">
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Doughnut Chart</div>
+                    <div class="panel-body">
+                        <div class="chart-container">
+                            <canvas id="doughnut" class="chart chart-doughnut"
+                                    chart-data="dataDoughnut" chart-labels="labelsDoughnut">
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Radar Chart</div>
+                    <div class="panel-body">
+                        <div class="chart-container">
+                            <canvas id="radar" class="chart chart-radar"
+                                    chart-data="dataRadar" chart-labels="labelsRadar">
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Pie Chart</div>
+                    <div class="panel-body">
+                        <div class="chart-container">
+                            <canvas id="pie" class="chart chart-pie"
+                                    chart-data="dataPie" chart-labels="labelsPie">
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Polar Area Chart</div>
+                    <div class="panel-body">
+                        <div class="chart-container">
+                            <canvas id="polar-area" class="chart chart-polar-area"
+                                    chart-data="dataPolarArea" chart-labels="labelsPolarArea">
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Pie Chart</div>
+                    <div class="panel-body">
+                        <div class="chart-container">
+                            <canvas id="base" class="chart-base" chart-type="type"
+                                    chart-data="dataBase" chart-labels="labelsBase" chart-legend="true">
+                            </canvas>
+                            <button type="button" class="btn btn-primary pull-right" ng-click="toggle()">Toggle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
