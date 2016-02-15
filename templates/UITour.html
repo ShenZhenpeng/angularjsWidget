@@ -1,5 +1,5 @@
 <style>
-    h1 { width: 50%; margin: 100px auto; text-align: center; background: lightblue; color: white;}
+    h1.chapter { width: 50%; margin: 100px auto; text-align: center; background: lightblue; color: white;}
 
     [ui-tour] > li {
         display: none;
@@ -30,38 +30,40 @@
         left: -4000px;
     }
 </style>
-<div class="wrapper-content" ng-init="currentStep=1">
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 id="one">Chapter One</h1>
-            <h1>Chapter Two</h1>
-            <h1>Chapter <a>Three</a></h1>
-            <h1>Chapter Four</h1>
+<div class="container">
+    <div class="center-block">
+        <div class="page-header text-center">
+            <h1 class="h1">
+                <a href="https://angular-ui.github.io/ui-tour/demo/demo.html" target="_blank">UI Tour</a>
+            </h1>
         </div>
-        <ul ui-tour="currentStep">
-            <li target="h1:eq(0)" at="right" class="popover right in" overlay>
+        <div class="col-lg-12">
+            <h1 class="chapter" id="1th">Chapter One</h1>
+            <h1 class="chapter" id="2th">Chapter Two</h1>
+            <h1 class="chapter" id="3th">Chapter <a>Three</a></h1>
+            <h1 class="chapter" id="4th">Chapter Four</h1>
+        </div>
+        <ul ui-tour="currentStep" ng-init="currentStep=1">
+            <li target="h1#1th" at="right" class="popover right in" overlay>
                 <div class="arrow"></div>
                 <h3 class="popover-title">A Title <a class="close" ng-click="currentStep=false">&times;</a></h3>
                 <div class="popover-content">And here's some amazing content. It's very engaging. right? First <button class="btn" ng-click="currentStep=currentStep+1">Next</button> <button class="btn" ng-click="currentStep=4">Go to 4</button> <button class="btn" ng-click="currentStep='chapter3'">Go to 'chapter3'</button></div>
             </li>
-            <li target="h1:eq(1)" at="top" class="popover top in">
+            <li target="h1#2th" at="top" class="popover top in">
                 <div class="arrow"></div>
                 <h3 class="popover-title">A Title <a class="close" ng-click="currentStep=false">&times;</a></h3>
                 <div class="popover-content"><button class="btn" ng-click="currentStep=currentStep-1">Prev</button> Second <button class="btn" ng-click="currentStep=currentStep+1">Next</button></div>
             </li>
-            <li target="h1:eq(2) a" at="left" name="chapter3" class="popover left in" overlay>
+            <li target="h1#3th a" at="left" name="chapter3" class="popover left in" overlay>
                 <div class="arrow"></div>
                 <h3 class="popover-title">A Title <a class="close" ng-click="currentStep=false">&times;</a></h3>
                 <div class="popover-content"><button class="btn" ng-click="currentStep=currentStep-1">Prev</button> Third <button class="btn" ng-click="currentStep=currentStep+1">Next</button></div>
             </li>
-            <li target="h1:eq(3)" at="bottom" class="popover bottom in">
+            <li target="h1#4th" at="bottom" class="popover bottom in">
                 <div class="arrow"></div>
                 <h3 class="popover-title">A Title <a class="close" ng-click="currentStep=false">&times;</a></h3>
                 <div class="popover-content">Fourth <button class="btn" ng-click="currentStep=currentStep+1">Next</button></div>
             </li>
         </ul>
-        <div class="col-lg-12">
-            <h2>https://angular-ui.github.io/ui-tour/demo/demo.html</h2>
-        </div>
     </div>
 </div>

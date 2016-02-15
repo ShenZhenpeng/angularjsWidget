@@ -18,9 +18,12 @@ angular.module('angularWidgetApp', [
     'DatePickerModule',
     'BaiduMapModule',
     'sortableModule',
-    'UITourModule'
+    'UITourModule',
+    'mainModule'
 ]).config(function () {
 
-}).controller('appCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
-
+}).controller('appCtrl', ['$scope', '$rootScope', '$location', function($scope, $rootScope, $location) {
+    $rootScope.$on('$routeChangeSuccess', function () {
+        $scope.page = $location.$$path;
+    });
 }]);

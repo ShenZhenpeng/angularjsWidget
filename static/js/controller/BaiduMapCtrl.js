@@ -6,16 +6,16 @@ angular.module('BaiduMapModule',[])
 
         var map;
 
-        // °Ù¶ÈµØÍ¼API
-        map = new BMap.Map('l-map', {minZoom:15}); //³õÊ¼»¯µØÍ¼£¬¹æ¶¨×îĞ¡Ëõ·Å
-        map.centerAndZoom(new BMap.Point(113.402364,23.056676), 16); //ÏÔÊ¾ÖĞĞÄ
-        map.enableScrollWheelZoom(); //ÆôÓÃ¹öÂÖËõ·Å
-        var top_right_navigation = new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_RIGHT, type: BMAP_NAVIGATION_CONTROL_SMALL});//ÓÒÉÏ½ÇÆ½ÒÆºÍËõ·Å°´Å¥
+        // ç™¾åº¦åœ°å›¾API
+        map = new BMap.Map('l-map', {minZoom:15}); //åˆå§‹åŒ–åœ°å›¾ï¼Œè§„å®šæœ€å°ç¼©æ”¾
+        map.centerAndZoom(new BMap.Point(113.402364,23.056676), 16); //æ˜¾ç¤ºä¸­å¿ƒ
+        map.enableScrollWheelZoom(); //å¯ç”¨æ»šè½®ç¼©æ”¾
+        var top_right_navigation = new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_RIGHT, type: BMAP_NAVIGATION_CONTROL_SMALL});//å³ä¸Šè§’å¹³ç§»å’Œç¼©æ”¾æŒ‰é’®
         // map.addControl(top_right_navigation);
-        /* ÓÉÓÚÉèÖÃÁËµØÍ¼±ß½ç£¬¼´ÍÏ×§µØÍ¼ÖÁ³¬³ö¡°´óÑ§³Ç¡±·¶Î§Ê±µØÍ¼»á×Ô¶¯µ¯»Ø£¬ËùÒÔÊ¹ÓÃÆ½ÒÆ°´Å¥Ê±Ëü¿ÉÄÜ»á³öÏÖ×Ô¼ººÍ×Ô¼º½Ï¾¢¶ùµÄÏÖÏó */
+        /* ç”±äºè®¾ç½®äº†åœ°å›¾è¾¹ç•Œï¼Œå³æ‹–æ‹½åœ°å›¾è‡³è¶…å‡ºâ€œå¤§å­¦åŸâ€èŒƒå›´æ—¶åœ°å›¾ä¼šè‡ªåŠ¨å¼¹å›ï¼Œæ‰€ä»¥ä½¿ç”¨å¹³ç§»æŒ‰é’®æ—¶å®ƒå¯èƒ½ä¼šå‡ºç°è‡ªå·±å’Œè‡ªå·±è¾ƒåŠ²å„¿çš„ç°è±¡ */
         var b = new BMap.Bounds(new BMap.Point(113.363465,23.033239),new BMap.Point(113.42225,23.081655));
         try {
-            BMapLib.AreaRestriction.setBounds(map, b); //ÉèÖÃ±ß½ç
+            BMapLib.AreaRestriction.setBounds(map, b); //è®¾ç½®è¾¹ç•Œ
         } catch (e) {
             alert(e);
         }
@@ -25,7 +25,7 @@ angular.module('BaiduMapModule',[])
 
         $scope.go = function() {
             document.getElementById('r-result').innerHTML = '';
-            map.clearOverlays(); //Çå¿ÕµØÍ¼ËùÓĞ±ê×¢
+            map.clearOverlays(); //æ¸…ç©ºåœ°å›¾æ‰€æœ‰æ ‡æ³¨
             var local = new BMap.LocalSearch(map, {
                 renderOptions:{
                     map: map,
@@ -34,13 +34,13 @@ angular.module('BaiduMapModule',[])
             });
             var b = new BMap.Bounds(new BMap.Point(113.363465,23.033239),new BMap.Point(113.42225,23.081655));
             BMapLib.AreaRestriction.setBounds(map, b);
-            var s_marker = null; //Æğµãmarker
-            var e_marker = null; //ÖÕµãmarker
-            local.searchInBounds($scope.init, map.getBounds()); //ÔÚ¡°´óÑ§³Ç¡±·¶Î§ÄÚ½øĞĞËÑË÷
-            local.setMarkersSetCallback(function (pois) { //²åÈëmarkerµÄ»Øµ÷º¯Êı
+            var s_marker = null; //èµ·ç‚¹marker
+            var e_marker = null; //ç»ˆç‚¹marker
+            local.searchInBounds($scope.init, map.getBounds()); //åœ¨â€œå¤§å­¦åŸâ€èŒƒå›´å†…è¿›è¡Œæœç´¢
+            local.setMarkersSetCallback(function (pois) { //æ’å…¥markerçš„å›è°ƒå‡½æ•°
                 for(var i = 0; i < pois.length; i++){
                     var marker = pois[i].marker;
-                    marker.addEventListener('click', function(){ //Ìí¼Ó¼àÌıÊÂ¼ş
+                    marker.addEventListener('click', function(){ //æ·»åŠ ç›‘å¬äº‹ä»¶
                         marker_trick = true;
                         var pos = this.getPosition();
                         setAdress_s(pos.lng, pos.lat);
@@ -48,13 +48,13 @@ angular.module('BaiduMapModule',[])
                 }
             })
             function setAdress_s(s_lng, s_lat) {
-                if (confirm('ÉèÎªÆğµã£¿')) {
+                if (confirm('è®¾ä¸ºèµ·ç‚¹ï¼Ÿ')) {
                     map.clearOverlays();
                     s_marker = new BMap.Marker(new BMap.Point(s_lng, s_lat));
-                    map.addOverlay(s_marker); //´´½¨±ê×¢
+                    map.addOverlay(s_marker); //åˆ›å»ºæ ‡æ³¨
                     local.searchInBounds($scope.ended, map.getBounds());
                     local.setMarkersSetCallback(function (pois) {
-                        //´Ëº¯ÊıĞ´ÔÚsetAdress_sÀïÃæ±£Ö¤ÏÈÉèÖÃÁËÆğµãºóÔÙÉèÖÃÖÕµã
+                        //æ­¤å‡½æ•°å†™åœ¨setAdress_sé‡Œé¢ä¿è¯å…ˆè®¾ç½®äº†èµ·ç‚¹åå†è®¾ç½®ç»ˆç‚¹
                         for(var i = 0; i < pois.length; i++){
                             var e_marker = pois[i].marker;
                             e_marker.addEventListener('click', function(){
@@ -66,7 +66,7 @@ angular.module('BaiduMapModule',[])
                     })
 
                     function setAdress_e(e_lng, e_lat) {
-                        if (confirm('ÉèÎªÖÕµã£¿')) {
+                        if (confirm('è®¾ä¸ºç»ˆç‚¹ï¼Ÿ')) {
                             map.clearOverlays();
                             e_marker = new BMap.Marker(new BMap.Point(e_lng, e_lat));
                             map.addOverlay(e_marker);
@@ -74,10 +74,10 @@ angular.module('BaiduMapModule',[])
                             var transit = new BMap.TransitRoute(map, {
                                 renderOptions: {
                                     map: map,
-                                    panel: 'r-result' //½«½á¹ûÏÔÊ¾ÔÚ$('#r-result')ÖĞ
+                                    panel: 'r-result' //å°†ç»“æœæ˜¾ç¤ºåœ¨$('#r-result')ä¸­
                                 }
                             });
-                            transit.search(s_marker.getPosition(), e_marker.getPosition()); //¹«½»ÏßÂ·²éÑ¯
+                            transit.search(s_marker.getPosition(), e_marker.getPosition()); //å…¬äº¤çº¿è·¯æŸ¥è¯¢
                         }
                     }
                 }

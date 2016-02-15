@@ -4,7 +4,10 @@
 angular.module('route', ['ngRoute'])
 	.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) {
 
-		$routeProvider.when('/chart', {
+		$routeProvider.when('/main', {
+			templateUrl: 'templates/main.html',
+			controller: 'mainCtrl'
+		}).when('/chart', {
 			templateUrl: 'templates/angular-chart.html',
 			controller: 'angularChartCtrl'
 		}).when('/uibootstrap', {
@@ -27,6 +30,6 @@ angular.module('route', ['ngRoute'])
 			controller: 'UITourCtrl'
 		})
 			.otherwise({
-				redirectTo: '/chart'
+				redirectTo: '/main'
 			})
 	}]);
