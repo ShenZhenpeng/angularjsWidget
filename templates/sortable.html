@@ -7,14 +7,12 @@
                 </ul>
             </div>
             <div class="col-md-6">
-                <ul class="list-group" ui-sortable="sortableOptionsList[0]" class="apps-container screen floatleft" ng-model="rawScreens[0]">
-                    <li class="list-group-item" ng-repeat="app in rawScreens[0]">{{$index}} {{app.title}}</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <ul class="list-group" ui-sortable="sortableOptionsList[1]" class="apps-container screen floatleft" ng-model="rawScreens[1]">
-                    <li class="list-group-item" ng-repeat="app in rawScreens[1]">{{$index}} {{app.title}}</li>
-                </ul>
+                <div ui-sortable="sortableOptionsList[0]" class="col-md-6 list-group apps-container" ng-model="rawScreens[0]">
+                    <div class="app list-group-item" ng-repeat="app in rawScreens[0]">{{$index}} {{app.title}}</div>
+                </div>
+                <div ui-sortable="sortableOptionsList[1]" class="col-md-6 list-group apps-container" ng-model="rawScreens[1]">
+                    <div class="app list-group-item" ng-repeat="app in rawScreens[1]">{{$index}} {{app.title}}</div>
+                </div>
             </div>
         </div>
     </div>

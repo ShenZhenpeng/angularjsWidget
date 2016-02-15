@@ -22,6 +22,9 @@ angular.module('route', ['ngRoute'])
 		}).when('/sortable', {
 			templateUrl: 'templates/sortable.html',
 			controller: 'sortableCtrl'
+		}).when('/uitour', {
+			templateUrl: 'templates/UITour.html',
+			controller: 'UITourCtrl'
 		})
 			.otherwise({
 				redirectTo: '/chart'

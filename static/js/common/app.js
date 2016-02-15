@@ -10,13 +10,15 @@ angular.module('angularWidgetApp', [
     'ui.ace',
     'ui.date',
     'ui.sortable',
+    'ui.tour',
 
     'angularChartModule',
     'UIBootstrapModule',
     'UIAceModule',
     'DatePickerModule',
     'BaiduMapModule',
-    'sortableModule'
+    'sortableModule',
+    'UITourModule'
 ]).config(function () {
 
 }).controller('appCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
